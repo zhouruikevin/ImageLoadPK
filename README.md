@@ -1,5 +1,376 @@
-# ImageCompare
+Í¼Æ¬¼ÓÔØÕâÖÖÊµÏÖ·±Ëö£¬¿É¸´ÓÃĞÔÓÖ¼«Ç¿µÄ¶«Î÷£¬×ÔÈ»ÊÇÑ¡ÔñÊ¹ÓÃÍ¼Æ¬¼ÓÔØ¿ò¼ÜÀ´¿ìËÙÊµÏÖ¡£
+ÏñÊÇAndroid-Universal-Image-Loader¡¢Glide¡¢Picasso¡¢FrescoÖ®Àà£¬ µ«ÊÇÕâÊ±ºòµÄ·³ÄÕÔÚÓÚ£¬ÕâÃ´¶àÍ¼Æ¬¼ÓÔØ¿ò¼Üµ½µ×Ë­×îÊµÓÃ£¿
 
-# å¯¹æ¯”æµè¡Œçš„å›¾ç‰‡å¼€æºåº“ã€‚åŒ…æ‹¬ Fresco \ Glide \ Picasso \ Universal Image Loader \ Volley
+ 1. ÓĞËµFresco£¬ÒòÎªÖ§³ÖWebP£¬»¹ÊÇÓÃÁËNDKÀ´¼ÓÔØÍ¼Æ¬£¬¼õÉÙJavaHeapµÄÊ¹ÓÃ
+ 2. ÓĞPicasso£¬¼ò½à¸ßĞ§
+ 3. ÓĞËµGlide£¬PicassoÉı¼¶£¬¿ÉÒÔ¼ÓÔØGif£¬ÔÚPicasso»ù´¡ÉÏÀ©Õ¹ÁËºÜ¶à·½·¨
+ 4. ImageLoader  Ê¹ÓÃ×î¹ã£¬ÒòÎª³öÀ´×îÔç£¬¿ÉÏ§Ã»ÈËÎ¬»¤ÁË
+ 
+ËãÁË£¬±Ï¾¹**Êµ¼ù²ÅÊÇ¼ìÑéÕæÀíµÄÎ¨Ò»±ê×¼**£¬²»Èç×Ô¼ºĞ´´úÂë²âÊÔÏÂ£¬ÕıºÃ»¹ÄÜÑ§Ï°ÏÂ¸÷¸ö¿ò¼ÜÔõÃ´Ê¹ÓÃµÄ¡£
+±¾ÎÄµ½µ××¼±¸×öÊ²Ã´£¬Ò»Í¼Ê¤Ç§ÑÔ
+![ÕâÀïĞ´Í¼Æ¬ÃèÊö](http://img.blog.csdn.net/20160706152847155)
+#»ØºÏÒ»£º²âÊÔÍøÂçÍ¼Æ¬¼ÓÔØËÙ¶È
 
-# å…·ä½“æ•ˆæœ,APP è·‘èµ·æ¥å°±çŸ¥é“äº†ã€‚
+##ÈçºÎ»ñÈ¡Í¼Æ¬¼ÓÔØËùÓÃÊ±¼ä
+###**³¢ÊÔĞŞ¸Ä¿ò¼Ü´úÂë**
+ÎÒ¿ªÊ¼³¢ÊÔ£¬ĞŞ¸ÄÍ¼Æ¬¼ÓÔØ¿ò¼ÜµÄ´úÂë£¬ÔÚ³õÊ¼»¯µÄÊ±ºò¼ÇÂ¼ÏÂÏµÍ³Ê±¼ät1¡£È»ºóµ±Í¼Æ¬¼ÓÔØ³É¹¦ºó£¬Ê¹ÓÃµ±Ç°ÏµÍ³Ê±¼ät2,t2-t1¾ÍÊÇ¿ò¼Ü¼ÓÔØËùÏûºÄµÄÊ±¼ä¡£µ«ÊÇÊµ¼ÊÈ¥×öµÄÊ±ºò£¬ÔÚ¸ÄÍêPicassoÔ´Âëºó£¬·¢ÏÖÕâÖÖÊµÏÖ¿ÉĞĞĞÔÌ«Èõ£¬Ïàµ±ÓÚÃ¿¸ö¿ò¼ÜÎÒ¶¼ĞèÒªÈ¥ĞŞ¸Ä´úÂë£¬¶øÇÒºóÃæµÄ¿ò¼ÜÊµÏÖ¶¼±ÈPicassoÒª¸´ÔÓ£¬ÏñFrescoÕâÖÖ£¬´úÂë·±¶à£¬ĞŞ¸ÄÆğÀ´ºÜÂé·³¡£
+###**ÀûÓÃ¿ò¼Ü±¾ÉíÌØĞÔ-Õ¼Î»Í¼ºÍ´íÎóÏÔÊ¾Í¼**
+»»Ò»ÖÖË¼Â·£¬ËùÓĞµÄ¿ò¼Ü²»¶¼Ö§³ÖÕ¼Î»·û£¬ºÍ³ö´í²Ù×÷Âğ£¿Ò²¾ÍÊÇÔÚÍ¼Æ¬¼ÓÔØ¹ı³ÌÖĞ¿ÉÒÔÏÈÉèÖÃÒ»ÕÅÕ¼Î»Í¼Æ¬£¬Èç¹û¼ÓÔØ³ö´í¿ÉÒÔ·ÅÖÃÒ»ÕÅ³ö´íÍ¼Æ¬¡£
+
+```
+        Glide.with(getContext())
+                .load(url)
+                .placeholder(Drawables.sPlaceholderDrawable) //³õÊ¼»¯ÏÔÊ¾
+                .error(Drawables.sErrorDrawable)  //¼ÓÔØÊ§ÎóÏÔÊ¾
+                .into(mImageView);
+```
+Ò²¾ÍÊÇËµÎÒÃÇ¿ÉÒÔ¸ù¾İ£¬×îÖÕ¼ÓÔØ³öÀ´µÄÍ¼Æ¬×ÊÔ´À´ÅĞ¶¨¼ÓÔØ³É¹¦Óë·ñ¡£
+![ÕâÀïĞ´Í¼Æ¬ÃèÊö](http://img.blog.csdn.net/20160705185255391)¡£
+ÄÇÃ´ÔõÃ´»ñµÃÕâ¸öÊ±¼ä£¿
+Í¼Æ¬×îÖÕÏÔÊ¾ÔÚImageViewÉÏ£¬ÎÒÃÇ´«µÄ¸ø¿ò¼ÜµÄÓÖÊÇ`Drawable`ÀàĞÍµÄÍ¼£¬ÄÇÃ´¿ò¼Ü×îÖÕ¿Ï¶¨»áµ÷ÓÃImageViewµÄ`setImageDrawable()`·½·¨¡£¿ÉÒÔÍ¨¹ıÖØĞ´ImageViewµÄÕâ¸ö·½·¨£¬À´ÊµÏÖ£¬Ö÷Òª¿´` public void setImageDrawable(Drawable drawable)`ÀïÃæµÄ´úÂë
+
+```
+public class WatchImageView extends ImageView implements WatchInterface {
+    private final WatchImpl mWatcher;
+
+    public WatchImageView(Context context) {
+        super(context);
+        //ÉèÖÃÍ¼Æ¬Ìî³äÑùÊ½Îª°´±ÈÀıÌîÂú¿Ø¼ş
+        setScaleType(ScaleType.CENTER_CROP);
+        mWatcher = new WatchImpl(this);
+    }
+
+
+    @Override
+    protected void onDraw(Canvas canvas) {
+        super.onDraw(canvas);
+        //»æÖÆ½á¹û»áÓÃµ½£¬Í¨¹ımWatcher×ª·¢
+        mWatcher.onDraw(canvas);
+    }
+
+//    ½ûÓÃÕâ¸ö·½·¨£¬·ÀÖ¹¿ò¼ÜÊ¹ÓÃËüÏÔÊ¾Í¼Æ¬£¬Ó°ÏìÎÒÃÇ²âÊÔÏÔÊ¾
+    @Override
+    public void setImageURI(Uri uri) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public void initWatcher(String tag, WatchListener watchListener) {
+        mWatcher.init(tag, watchListener);
+        mWatcher.onStart(); //³õÊ¼»¯
+    }
+    
+//¾ßÌåÊµÏÖ
+    @Override
+    public void setImageDrawable(Drawable drawable) {
+
+        Preconditions.checkNotNull(drawable);
+        if (drawable == Drawables.sPlaceholderDrawable) {
+            //²»ÔÙÕâÀïµ÷ÓÃ£¬ÔÚ³õÊ¼»¯¼ÓÔØÆ÷£¬Glide.build()ÊµÏÖµ÷ÓÃ¸üºÃ
+        } else if (drawable == Drawables.sErrorDrawable) {
+            mWatcher.onFailure();//¼ÓÔØÊ§°Ü
+        } else {
+            mWatcher.onSuccess();//¼ÓÔØ³É¹¦
+        }
+        super.setImageDrawable(drawable);
+    }
+}
+```
+
+ÕâÀïµÄWatchInterfaceÓÃÀ´³õÊ¼»¯£¬¼àÊÓÆ÷ÓÃ
+
+```
+public interface WatchInterface {
+    void initWatcher(final String tag, WatchListener watchListener);
+}
+```
+ÇëÇó´ÎÊıÍ³¼Æ·ÅÔÚ`WatchListener `ÀïÊµÏÖ¡£
+###**×¢Òâ£ºÒ»¶¨ÒªÉèÖÃÕ¼Î»Í¼ºÍ³ö´íÍ¼**
+ÒòÎª×îÖÕÎÒÃÇÊÇÍ¨¹ıÅĞ¶Ï£¬µ±Ç°ImageViewÏÔÊ¾µÄ¾ßÌåÊÇÄÄÒ»ÕÅDrawableÀ´ÅĞ¶¨¼ÓÔØÊ§°Ü£¬¼ÓÔØ³É¹¦£¬»¹ÊÇÈ¡Ïû¼ÓÔØ¡£ËùÒÔÒ»¶¨ÒªÉèÖÃ£¬¶øÇÒÏŞ¶¨Õ¼Î»Í¼Ò»¶¨ÒªÊÇ`R.drawable.placeholder`
+![ÕâÀïĞ´Í¼Æ¬ÃèÊö](http://img.blog.csdn.net/20160706002941609)
+³ö´íÍ¼Ò»¶¨ÒªÊÇ`R.drawable.error`
+![ÕâÀïĞ´Í¼Æ¬ÃèÊö](http://img.blog.csdn.net/20160706003015094)
+ÎªÁË·½±ãÊ¹ÓÃ£¬½øĞĞÁË¼òµ¥·â×°
+
+```
+public class Drawables {
+    public static Drawable sPlaceholderDrawable;
+    public static Drawable sErrorDrawable;
+
+    private Drawables() {
+    }
+
+    public static void init(final Resources resources) {
+        if (sPlaceholderDrawable == null) {
+            sPlaceholderDrawable = resources.getDrawable(R.drawable.placeholder);
+        }
+        if (sErrorDrawable == null) {
+            sErrorDrawable = resources.getDrawable(R.drawable.error);
+        }
+    }
+}
+```
+Ê¹ÓÃ£º
+
+ 1.Glide
+ 
+
+```
+        Glide.with(getContext())
+                .load(url)
+                .placeholder(Drawables.sPlaceholderDrawable)
+                .error(Drawables.sErrorDrawable)
+```
+
+2.Picasso  ´óÍ¬Ğ¡Òì
+
+```
+        mPicasso.load(url)
+                .placeholder(Drawables.sPlaceholderDrawable)
+                .error(Drawables.sErrorDrawable)
+```
+3.ImageLoader
+
+```
+            mImageOptions = new DisplayImageOptions.Builder()
+                    .showImageOnLoading(Drawables.sPlaceholderDrawable)
+                    .showImageOnFail(Drawables.sErrorDrawable)
+```
+4.Fresco
+
+```
+        GenericDraweeHierarchy genericDraweeHierarchy = new GenericDraweeHierarchyBuilder(getContext().getResources())
+                .setPlaceholderImage(Drawables.sPlaceholderDrawable)
+                .setFailureImage(Drawables.sErrorDrawable)
+```
+##²âÊÔ×¢ÒâÊÂÏî
+ÎªÁË±£Ö¤£¬²âÊÔµÄ¹«Æ½ĞÔ£¬±£Ö¤¿ò¼ÜÊ¹ÓÃµÄ¼ÓÔØ»·¾³Ò»ÖÂ£¬¶ÔÃ¿¸ö¿ò¼ÜÔËĞĞÀ´Ëµ
+
+ 1. ¼ÓÔØÍ¼Æ¬µÄµØÖ·Ò»ÖÂ£¬¼ÓÔØË³ĞòÒ»ÖÂ
+ 2. ½ûÖ¹Ê¹ÓÃÄÚ´æ»º´æ£¬Ó²ÅÌ»º´æ£¬Ö»ÄÜÍ¨¹ıÍøÂç»ñÈ¡Í¼Æ¬
+ 3. ²âÊÔµÄÈíÓ²¼ş»·¾³Ò»ÖÂ,¼´:Ê¹ÓÃÍ¬Ò»¸öÊÖ»ú²âÊÔ£¬¶øÇÒÃ¿´ÎÊ¹ÓÃÒ»¸ö¿ò¼Ü¼ÓÔØºó£¬Çå¿ÕÄÚ´æÔÙÊ¹ÓÃÁíÒ»¸ö¿ò¼Ü²âÊÔ
+
+##ÉèÖÃ²»Ê¹ÓÃ»º´æ
+ÒòÎªÊÇ²âÊÔÍøÂçÍ¼Æ¬¼ÓÔØÄÜÁ¦£¬ÄÚ´æ»º´æºÍ´ÅÅÌ»º´æÓ¦¸Ã±»½ûÖ¹
+###**Glide²»Ê¹ÓÃ»º´æ**
+Ö±½ÓÌá¹©ÁË
+```
+                .skipMemoryCache(true) //²»Ê¹ÓÃÄÚ´æ»º´æ
+                .diskCacheStrategy(DiskCacheStrategy.NONE) //²»Ê¹ÓÃÓ²ÅÌ»º´æ
+```
+
+###**Fresco²»Ê¹ÓÃ»º´æ**
+FrescoÂé·³Ò»µã£¬ÕÒÁËºÃ¾ÃÃ»ÕÒµ½Õâ¸ö·½·¨£¬**Èç¹ûÓĞÖªµÀµÄÅóÓÑ£¬·³Çë¸æËßÎÒÏÂ**
+»»Ò»ÖÖË¼Â·£¬ÎÒÖ±½ÓÉèÖÃËûµÄÄÚ´æ»º´æÎª¿Õ¼äÎª0£¬´ÅÅÌ»º´æ¿Õ¼äÒ²Îª0£¬¼´¿É
+
+
+###**Picasco²»Ê¹ÓÃ»º´æ**
+Ò»¾ä»°¼òµ¥¿ì½İ
+```
+                .memoryPolicy(MemoryPolicy.NO_CACHE, MemoryPolicy.NO_STORE)//²»Ê¹ÓÃÄÚ´æ»º´æ
+                .networkPolicy(NetworkPolicy.NO_CACHE, NetworkPolicy.NO_STORE)//²»Ê¹ÓÃ´ÅÅÌ»º´æ
+```
+###**ImageLoader²»Ê¹ÓÃ»º´æ**
+
+```
+                    .cacheInMemory(false) //²»Ê¹ÓÃÄÚ´æ»º´æ
+                    .cacheOnDisk(false)  //²»Ê¹ÓÃÓ²ÅÌ»º´æ
+```
+
+ 
+##×îÖÕĞ§¹û
+Õı³£ÍøÂç»·¾³ÏÂ£¬¼¸¸ö¿ò¼Ü±íÏÖ¶¼²î²»¶à£¨ÄãÒ²¿ÉÒÔÊ¹ÓÃ±¾ÎÄµÄDemo£¬Ó¦¸Ã±ÈÕâ¸öËÙ¶È¿ì¶àÁË£¬ÎÒÔÚ¼ÒÀï²âÊÔ»ù±¾Ò»ÕÅÍ¼Æ¬ÔÚ1000-2000ms×óÓÒ¡££©
+µ«ÊÇ£¬ÕâÀï²âÊÔÊ¹ÓÃµÄÍøÂç±È½ÏÂı
+|Ãû³Æ| Í³¼Æ´ÎÊı| Æ½¾ùÊ±¼ä(ms)  |
+| :------------: |:-------------:| :-----:|
+| Fresco| 72 | 3877ms |
+|  Picasso | 100|   3976ms |
+| ImageLoader | 100|    4402ms |
+| Glide | 100|    4800ms |
+½á¹û³öºõÒâÁÏ£¬Glide¾ÓÈ»ĞÔÄÜ×î²î¡£
+###**FrescoµÄNative Heap**
+¼ÇµÃÇ°Ãæ£¬ÎÒÃÇ°ÑÓ²ÅÌ»º´æºÍÄÚ´æ»º´æµÄ´óĞ¡¶¼ÉèÖÃÎª0£¬µ«ÊÇFresco»¹ÓĞÒ»¸öNative²ã»º´æ¡£
+ÖØÏÖ²½Öè£º
+
+ 1. FrescoÕı³£¼ÓÔØÍ¼Æ¬£¬ÍË³öApp
+ 2. ¹Ø±ÕÍøÂç£¬ÇåÀíAppºóÌ¨Õ¼ÓÃ×ÊÔ´
+ 3. ÔÙ´Î´ò¿ª£¬Ê¹ÓÃFrescoÔÙ´Î¼ÓÔØ£¬¾ÓÈ»»áÓĞÒ»Ğ©Å¼·¢µÄ¼ÓÔØ³É¹¦
+![ÕâÀïĞ´Í¼Æ¬ÃèÊö](http://img.blog.csdn.net/20160706163333305)
+¿´¼ÓÔØÊ±¼ä73ms£¬ÕâÃ÷ÏÔÀ´×Ô»º´æ
+###**Glide¾­³£¼ÓÔØÊ§°Ü**
+ÔÚÍøÂçÕı³£µÄÊ±ºò£¬Õâ¸öÏÖÏóºÜÉÙ¼û¡£µ«ÊÇÇĞ»»µ½ÍøÂç²»ÄÇÃ´ºÃ£¬Õâ¸öGlide¼ÓÔØÊ§°ÜµÄÇé¿öÆµ·¢¡£
+×ĞÏ¸¹Û²ì¼ÓÔØÊ±¼ä£¬ÍøÂç·ÃÎÊ2645ms¾Í»Øµ÷ÏÔÊ¾Ê§°Ü£¬¹Ø¼üÊÇÍ¬Ê±¼ÓÔØµÄÍ¼Æ¬ÖĞ£¬»¹ÓĞ´æÔÚ10000+ms¼ÓÔØ³É¹¦µÄÇé¿ö£¬ÕâÀïÈÃÎÒ¾õµÃ·Ç³£À§»ó
+ ![ÕâÀïĞ´Í¼Æ¬ÃèÊö](http://img.blog.csdn.net/20160706141835536)
+
+
+GlideÔÚÊ¹ÓÃ±¾ÉíÍøÂç¼ÓÔØµÄÊ±ºò£¬ÔÚÍøÂç»·¾³²»ºÃµÄÊ±ºò£¬¼ÓÔØËÙ¶ÈÂı£¬¼ÓÔØ²ßÂÔÆæİâ¡££¨ºóĞò£ºÔÚÓÃGlideÖĞÄÚÖÃOkHttp×÷ÎªHttpClientºó£¬Õâ¸öÎÊÌâµÃÒÔĞŞÕı£¬»áÔÚºóÃæµÄBlogĞ´³öÀ´£©¡£
+
+
+
+ 
+#»ØºÏ¶ş£º»º´æ¼ÓÔØËÙ¶È
+
+##Ç°Ìá
+
+ 1. ±£Ö¤Ã¿¸ö¿ò¼ÜÊ¹ÓÃµÄÄÚ´æ»º´æ£¬´ÅÅÌ»º´æ¶¼ÊÇÒ»ÖÂµÄ¡££¨ÄÚ´æ»º´æÎªÏµÍ³¿ÉÒÔ»º´æµÄ1/4£¬´ÅÅÌ»º´æ¶¼ÊÇ50M£©
+ 2. ±£Ö¤Í¼Æ¬¶¼ÒÑ»º´æµ½±¾µØ£¬¸Ä±äÍ¼Æ¬¼ÓÔØË³ĞòÈÃÆäËæ»ú³öÏÖ
+ 3. ²âÊÔ»·¾³±£³ÖÒ»ÖÂ
+ 
+##ĞŞ¸Ä»º´æ´óĞ¡
+ÏÈ°ÑÅäÖÃĞÅÏ¢Ğ´ÈëÎÄ¼ş
+
+```
+public class ConfigConstants {
+    public static final int MAX_HEAP_SIZE = (int) Runtime.getRuntime().maxMemory();
+    public static final int MAX_CACHE_MEMORY_SIZE = MAX_HEAP_SIZE / 4;
+    public static final int MAX_CACHE_DISK_SIZE = 50 * 1024 * 1024;
+}
+```
+
+###Glide
+GlideĞŞ¸ÄÅäÖÃĞÅÏ¢µÄ·½Ê½£¬ÊÇÍ¨¹ıXML½áµãÔªËØ
+¶¨Òå
+```
+public class GlideConfigModule implements GlideModule {
+    public final static String TAG = "GlideConfigModule";
+
+    @Override
+    public void applyOptions(Context context, GlideBuilder builder) {
+        builder.setDiskCache(new InternalCacheDiskCacheFactory(context, ConfigConstants.MAX_CACHE_DISK_SIZE));
+        builder.setMemoryCache(new LruResourceCache(ConfigConstants.MAX_CACHE_MEMORY_SIZE));
+        builder.setBitmapPool(new LruBitmapPool(ConfigConstants.MAX_CACHE_MEMORY_SIZE));
+    }
+
+    @Override
+    public void registerComponents(Context context, Glide glide) {
+    }
+}
+```
+È»ºóÔÙAndroidManifestÎÄ¼şÖĞ
+
+```
+        <meta-data
+            android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule"
+            android:value="GlideModule"/>
+```
+ÕâÀïÒ»¶¨±£Ö¤ÊÇÈ«Â·¾¶
+###Picasso
+PicassoÍ¨¹ı`Picasso.Builder`À´ÅäÖÃ£¬±Ï¾¹Builder·ç¸ñÊÇSquare¹«Ë¾Ò»¹áµÄ·ç¸ñÂï
+```
+public class PicassoConfigFactory {
+    private static Picasso sPicasso;
+
+    public static Picasso getPicasso(Context context) {
+        if (sPicasso == null) {
+            sPicasso = new Picasso.Builder(context)
+                    //Ó²ÅÌ»º´æ³Ø´óĞ¡
+                    .downloader(new OkHttpDownloader(context, ConfigConstants.MAX_CACHE_DISK_SIZE))
+                    //ÄÚ´æ»º´æ³Ø´óĞ¡
+                    .memoryCache(new LruCache(ConfigConstants.MAX_CACHE_MEMORY_SIZE))
+                    .build();
+        }
+        return sPicasso;
+    }
+}
+```
+
+###ImageLoader
+ImageLoaderºÍPicassoºÜÏñ
+```
+public class ImageLoaderFactory {
+    private static ImageLoader sImageLoader;
+    public static ImageLoader getImageLoader(Context context) {
+
+        if (sImageLoader == null) {
+            ImageLoaderConfiguration imageLoaderConfiguration = new ImageLoaderConfiguration.Builder(context)
+                    .diskCacheSize(ConfigConstants.MAX_CACHE_DISK_SIZE)
+                    .memoryCacheSize(ConfigConstants.MAX_CACHE_MEMORY_SIZE)
+                    .build();
+
+            sImageLoader = ImageLoader.getInstance();
+            sImageLoader.init(imageLoaderConfiguration);
+        }
+        return sImageLoader;
+    }
+}
+```
+
+###Fresco
+FrescoÊ¹ÓÃ`ImagePipelineConfig`À´ÊµÏÖ
+```
+    public static ImagePipelineConfig getImagePipelineConfig(Context context) {
+        if (sImagePipelineConfig == null) {
+            sImagePipelineConfig = ImagePipelineConfig.newBuilder(context)
+                    .setMainDiskCacheConfig(DiskCacheConfig.newBuilder(context)
+                            .setMaxCacheSize(ConfigConstants.MAX_CACHE_DISK_SIZE)
+                            .build())
+                    .setBitmapMemoryCacheParamsSupplier(
+                            new Supplier<MemoryCacheParams>() {
+                                @Override
+                                public MemoryCacheParams get() {
+                                    return new MemoryCacheParams(ConfigConstants.MAX_CACHE_MEMORY_SIZE,
+                                            Integer.MAX_VALUE,
+                                            Integer.MAX_VALUE,
+                                            Integer.MAX_VALUE,
+                                            Integer.MAX_VALUE);
+                                }
+                            }
+                    )
+                    .build();
+        }
+        return sImagePipelineConfig;
+    }
+}
+```
+È»ºóÔÚFresco³õÊ¼»¯µÄÊÂºó£¬Ìî³ä½øÈ¥
+
+```
+ Fresco.initialize(context, FrescoConfigFactory.getImagePipelineConfig(context));
+```
+##Í¼Æ¬Ëæ»ú³öÏÖ
+
+```
+    public static final String[] URLS = {
+            BASE + "CqmBjo5" + EXT, BASE + "zkaAooq" + EXT, BASE + "0gqnEaY" + EXT,
+            BASE + "9gbQ7YR" + EXT, BASE + "aFhEEby" + EXT, BASE + "0E2tgV7" + EXT,
+            BASE + "P5JLfjk" + EXT, BASE + "nz67a4F" + EXT, BASE + "dFH34N5" + EXT,
+            BASE + "FI49ftb" + EXT, BASE + "DvpvklR" + EXT, BASE + "DNKnbG8" + EXT,
+            BASE + "yAdbrLp" + EXT, BASE + "55w5Km7" + EXT, BASE + "NIwNTMR" + EXT,
+            BASE + "DAl0KB8" + EXT, BASE + "xZLIYFV" + EXT, BASE + "HvTyeh3" + EXT,
+            BASE + "Ig9oHCM" + EXT, BASE + "7GUv9qa" + EXT, BASE + "i5vXmXp" + EXT,
+            BASE + "glyvuXg" + EXT, BASE + "u6JF6JZ" + EXT, BASE + "ExwR7ap" + EXT,
+            BASE + "Q54zMKT" + EXT, BASE + "9t6hLbm" + EXT, BASE + "F8n3Ic6" + EXT,
+            BASE + "P5ZRSvT" + EXT, BASE + "jbemFzr" + EXT, BASE + "8B7haIK" + EXT,
+            BASE + "aSeTYQr" + EXT, BASE + "OKvWoTh" + EXT, BASE + "zD3gT4Z" + EXT,
+            BASE + "z77CaIt" + EXT,
+    };
+    public void setRandomDatas() {
+        Collections.addAll(mDatas, Data.URLS);
+        Collections.shuffle(mDatas);
+        List<String> copyDatas = new ArrayList<>(mDatas);
+        mDatas.addAll(copyDatas);
+        mDatas.addAll(copyDatas);
+    }
+```
+##×îÖÕ½á¹û
+ÏÈÓÃÍøÂç¼ÓÔØÍ¼Æ¬£¬±£Ö¤Í¼Æ¬ÒÑ¾­È«²¿¼ÓÔØµ½±¾µØ¡£
+|Ãû³Æ| Í³¼Æ´ÎÊı| Æ½¾ùÊ±¼ä(ms)  |
+| :------------: |:-------------:| :-----:|
+| ImageLoader |  34|    57ms |
+| Glide |  34|    77ms |
+| Fresco| 34 | 91ms |
+|  Picasso |  34|   278ms |
+
+Glide£º
+![ÕâÀïĞ´Í¼Æ¬ÃèÊö](http://img.blog.csdn.net/20160706172532731)
+Picasso£º
+![ÕâÀïĞ´Í¼Æ¬ÃèÊö](http://img.blog.csdn.net/20160706172607278)
+
+ ·¢ÏÖPicasso¼ÓÔØÃ÷ÏÔÂıÒ»¸ö²ã´Î£¬ÌØ±ğÊÇÔÚ¿ìËÙ»¬¶¯µÄÊ±ºò£¬¿¼ÂÇµ½PicassoÊ¹ÓÃµÄÊÇ`Bitmap.Config.ARGB_8888`¿ÉÄÜ»áÏûºÄ¸ü¶àÄÚ´æºÍGPU×ÊÔ´£¬ÎÒÃÇ°ÑËüĞŞ¸ÄÎª`Bitmap.Config.ARGB_4444`ÔÙÊÔÒ»±é
+ ![ÕâÀïĞ´Í¼Æ¬ÃèÊö](http://img.blog.csdn.net/20160706175433693)
+ 
+Õ¼ÓÃµÄÄÚ´æµÄÈ·´Ó60+M¼õµÍµ½37M£¬¿¼ÂÇµ½Í¼Æ¬±¾ÉíÌå»ıÒ²²»´ó£¬Õâ¸öÁ¿µÄÈ·ºÜ´ó¡£
+µ«ÊÇ£ºÆ½¾ù¼ÓÔØÊ±¼ä»¹ÊÇ279ms¡£
+²Â²âÕâ¿ÉÄÜºÍPicassoµÄ»º´æ²ßÂÔÑ¡Ôñ»º´æÔ´Í¼Æ¬´óĞ¡£¬¶øÆäËû¿ò¼ÜÄ¬ÈÏÑ¡Ôñ»º´æÊÊÓ¦ImageViewºóµÄ³ß´çµÄÔ­Òòµ¼ÖÂ
+
+´úÂëÏÂÔØµØÖ·£ºhttps://github.com/zhouruikevin/ImageLoadPK
