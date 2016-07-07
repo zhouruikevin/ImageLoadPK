@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.imagescaletype.MainActivity">
+
+    <ImageView
+        android:id="@+id/ivTop"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/background_dark"
+        android:scaleType="matrix"
+        android:src="@drawable/bulldog"/>
+
+    <ImageView
+        android:id="@+id/ivBottom"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginTop="30dp"
+        android:background="@android:color/background_dark"
+        android:scaleType="matrix"
+        android:src="@drawable/cat"/>
+
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:orientation="horizontal"
+        android:rowCount="3">
+
+        <RadioButton
+            android:id="@+id/center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CENTER"/>
+
+        <RadioButton
+            android:id="@+id/centerCrop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CENTER_CROP"/>
+
+        <RadioButton
+            android:id="@+id/centerInside"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CENTER_INSIDE"/>
+
+        <RadioButton
+            android:id="@+id/fitCenter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FIT_CENTER"/>
+
+        <RadioButton
+            android:id="@+id/fitStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FIT_START"/>
+
+        <RadioButton
+            android:id="@+id/fitEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FIT_END"/>
+
+        <RadioButton
+            android:id="@+id/fitXY"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FIT_XY"/>
+
+        <RadioButton
+            android:id="@+id/matrix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MATRIX"/>
+
+    </GridLayout>
+</LinearLayout>

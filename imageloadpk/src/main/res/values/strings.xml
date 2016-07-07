@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ImageLoadPK</string>
+    <string name="fresco">Fresco</string>
+    <string name="imageload">ImageLoad</string>
+    <string name="picasso">Picasso</string>
+    <string name="glide">Glide</string>
+</resources>

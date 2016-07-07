@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ImageCompare-master.iml" filepath="$PROJECT_DIR$/ImageCompare-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ImageLoadPK.iml" filepath="$PROJECT_DIR$/ImageLoadPK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/imageloadpk/imageloadpk.iml" filepath="$PROJECT_DIR$/imageloadpk/imageloadpk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/imagescaletype/imagescaletype.iml" filepath="$PROJECT_DIR$/imagescaletype/imagescaletype.iml" />
+    </modules>
+  </component>
+</project>
