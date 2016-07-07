@@ -2,6 +2,7 @@
   <library name="support-v4-23.4.0">
     <ANNOTATIONS>
       <root url="jar://$PROJECT_DIR$/imageloadpk/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/annotations.zip!/" />
+      <root url="jar://$PROJECT_DIR$/imageloadpk/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/imageloadpk/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar!/" />
@@ -10,6 +11,7 @@
     </CLASSES>
     <JAVADOC />
     <SOURCES>
+      <root url="jar://D:/AndroidStudio/sdk/extras/android/m2repository/com/android/support/support-v4/23.4.0/support-v4-23.4.0-sources.jar!/" />
       <root url="jar://D:/AndroidStudio/sdk/extras/android/m2repository/com/android/support/support-v4/23.4.0/support-v4-23.4.0-sources.jar!/" />
     </SOURCES>
   </library>

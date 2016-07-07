@@ -1,1 +1,1 @@
-include ':imageloadpk', ':imagescaletype'
+include ':imageloadpk', ':imagescaletype', ':glidesample'

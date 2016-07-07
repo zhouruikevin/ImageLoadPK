@@ -2,6 +2,7 @@
   <library name="appcompat-v7-23.4.0">
     <ANNOTATIONS>
       <root url="jar://$PROJECT_DIR$/imageloadpk/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/annotations.zip!/" />
+      <root url="jar://$PROJECT_DIR$/imageloadpk/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
       <root url="file://$PROJECT_DIR$/imageloadpk/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res" />
@@ -9,6 +10,7 @@
     </CLASSES>
     <JAVADOC />
     <SOURCES>
+      <root url="jar://D:/AndroidStudio/sdk/extras/android/m2repository/com/android/support/appcompat-v7/23.4.0/appcompat-v7-23.4.0-sources.jar!/" />
       <root url="jar://D:/AndroidStudio/sdk/extras/android/m2repository/com/android/support/appcompat-v7/23.4.0/appcompat-v7-23.4.0-sources.jar!/" />
     </SOURCES>
   </library>

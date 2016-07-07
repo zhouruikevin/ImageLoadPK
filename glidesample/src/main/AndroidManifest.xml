@@ -1,27 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.example.imageloadpk">
+          package="example.com.glidesample">
 
     <uses-permission android:name="android.permission.INTERNET"/>
+    <meta-data
+        android:name="example.com.glidesample.CustomImageSizeGlideModule"
+        android:value="GlideModule"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <meta-data
-            android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule"
-            android:value="GlideModule"/>
-        <meta-data
-            android:name="com.example.imageloadpk.adapter.config.GlideConfigModule"
-            android:value="GlideModule"/>
-        <!--<meta-data-->
-        <!--android:name="com.bumptech.glide.integration.volley.VolleyGlideModule"-->
-        <!--android:value="GlideModule"/>-->
-
-        <activity
-            android:name=".model.MainActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

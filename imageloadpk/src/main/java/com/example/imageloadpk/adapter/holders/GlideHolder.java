@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.View;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.resource.drawable.GlideDrawable;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
@@ -41,12 +42,13 @@ public class GlideHolder extends BaseHolder<WatchImageView> {
     protected void onBind(String url) {
         Glide.with(getContext())
                 .load(url)
-                .listener(mRequestListener)
+                .listener(mRequestListener)//配置监听器
                 .placeholder(Drawables.sPlaceholderDrawable)
                 .error(Drawables.sErrorDrawable)
                 .centerCrop()
-//                .skipMemoryCache(true) //不使用内存缓存
-//                .diskCacheStrategy(DiskCacheStrategy.NONE) //不使用硬盘缓存
+                .skipMemoryCache(true) //不使用内存缓存
+                .diskCacheStrategy(DiskCacheStrategy.NONE) //不使用硬盘缓存
                 .into(mImageView);
     }
 }
+
