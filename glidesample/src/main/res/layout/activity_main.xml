@@ -9,12 +9,27 @@
     <ImageView
         android:id="@+id/ivShow"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="200dp"
+        android:scaleType="fitCenter"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scrollbarStyle="insideInset"
+        android:visibility="invisible"/>
 
     <Button
         android:id="@+id/btLoading"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/ivShow"
         android:text="加载"/>
+
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btLoading"
+        android:text="清空"/>
 </RelativeLayout>
