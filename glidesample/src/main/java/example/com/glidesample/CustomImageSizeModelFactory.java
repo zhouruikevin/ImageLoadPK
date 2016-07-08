@@ -16,7 +16,6 @@ public class CustomImageSizeModelFactory implements ModelLoaderFactory<CustomIma
     public final static String TAG  =  "CustomImageSizeModelFactory";
     @Override
     public ModelLoader<CustomImageSizeModel, InputStream> build(Context context, GenericLoaderFactory factories) {
-        Log.d(TAG, "build: ");
         return new CustomImageModelLoader(context);
     }
 
