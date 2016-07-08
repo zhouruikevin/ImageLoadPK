@@ -19,6 +19,6 @@ public class CustomImageSizeGlideModule implements GlideModule {
 
     @Override
     public void registerComponents(Context context, Glide glide) {
-        glide.register(CustomImageSizeModel.class, InputStream.class, new CustomImageSizeModelFactory());
+//        glide.register(CustomImageSizeModel.class, InputStream.class, new CustomImageSizeModelFactory());
     }
 }
