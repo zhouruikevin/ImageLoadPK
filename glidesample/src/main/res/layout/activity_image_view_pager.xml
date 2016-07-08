@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000"
-    tools:context="example.com.glidesample.ImageViewPagerActivity">
+    tools:context=".ui.ImageViewPagerActivity">
 
     <android.support.v4.view.ViewPager
         android:id="@+id/viewPager"

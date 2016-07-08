@@ -1,4 +1,4 @@
-package example.com.glidesample;
+package example.com.glidesample.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -15,9 +15,10 @@ public class CustomImageSizeModelImp implements CustomImageSizeModel, Parcelable
         this.baseUrl = baseUrl;
     }
 
+
     @Override
     public String requestCustomSizeUrl(int width, int height) {
-        String url = baseUrl + "?imageView2/2/h/" + height + "/w/" + width;
+        String url = baseUrl + "?imageView2/3/h/" + height + "/w/" + width;
         Log.d(TAG, "requestCustomSizeUrl: " + url);
         return url;
     }

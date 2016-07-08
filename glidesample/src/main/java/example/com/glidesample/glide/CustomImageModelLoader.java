@@ -1,8 +1,10 @@
-package example.com.glidesample;
+package example.com.glidesample.glide;
 
 import android.content.Context;
 
 import com.bumptech.glide.load.model.stream.BaseGlideUrlLoader;
+
+import example.com.glidesample.model.CustomImageSizeModel;
 
 /**
  * Created by Administrator on 2016/7/7.

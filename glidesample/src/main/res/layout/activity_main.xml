@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="example.com.glidesample.MainActivity">
+    tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/ivShow"
@@ -37,6 +37,13 @@
         android:id="@+id/btnImagePager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btLoading"
-        android:text="微信图片"/>
+        android:layout_below="@id/btnClear"
+        android:text="微信图片九宫格"/>
+
+    <Button
+        android:id="@+id/btnCommonPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnImagePager"
+        android:text="不压缩图片九宫格"/>
 </RelativeLayout>

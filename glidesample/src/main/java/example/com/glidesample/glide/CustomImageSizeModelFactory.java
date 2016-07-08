@@ -1,13 +1,14 @@
-package example.com.glidesample;
+package example.com.glidesample.glide;
 
 import android.content.Context;
-import android.util.Log;
 
 import com.bumptech.glide.load.model.GenericLoaderFactory;
 import com.bumptech.glide.load.model.ModelLoader;
 import com.bumptech.glide.load.model.ModelLoaderFactory;
 
 import java.io.InputStream;
+
+import example.com.glidesample.model.CustomImageSizeModel;
 
 /**
  * Created by Administrator on 2016/7/7.

@@ -4,6 +4,13 @@
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
+    <meta-data
+        android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule"
+        android:value="GlideModule"/>
+    <meta-data
+        android:name="example.com.glidesample.glide.GlideConfigModule"
+        android:value="GlideModule"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -18,10 +25,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ImageViewPagerActivity"
+            android:name=".ui.ImageViewPagerActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">
         </activity>
-        <activity android:name=".GirdViewActivity">
+        <activity android:name=".ui.GirdViewActivity">
         </activity>
     </application>
 

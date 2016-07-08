@@ -1,4 +1,4 @@
-package example.com.glidesample;
+package example.com.glidesample.model;
 
 /**
  * Created by Administrator on 2016/7/7.

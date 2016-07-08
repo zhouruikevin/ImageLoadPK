@@ -1,6 +1,5 @@
-package example.com.glidesample;
+package example.com.glidesample.ui;
 
-import android.media.Image;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -9,23 +8,24 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.DrawableRequestBuilder;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.bumptech.glide.load.resource.drawable.DrawableResource;
 import com.bumptech.glide.load.resource.drawable.GlideDrawable;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import example.com.glidesample.glide.CustomImageModelLoader;
+import example.com.glidesample.R;
+import example.com.glidesample.model.CustomImageSizeModel;
+import example.com.glidesample.model.CustomImageSizeModelImp;
 import uk.co.senab.photoview.PhotoViewAttacher;
 
 public class ImageViewPagerActivity extends AppCompatActivity {
@@ -116,15 +116,17 @@ public class ImageViewPagerActivity extends AppCompatActivity {
         void displayImage(final CustomImageSizeModel model, final ImageView imageView, final View loading, final View download) {
             DrawableRequestBuilder thumbnailBuilder = Glide
                     .with(imageView.getContext())
-                    .load(new CustomImageSizeModelImp(model.getBaseUrl()).requestCustomSizeUrl(100, 50))
+                    .load(new CustomImageSizeModelImp(model
+                            .getBaseUrl())
+                            .requestCustomSizeUrl(100, 50))
                     .skipMemoryCache(true)
                     .diskCacheStrategy(DiskCacheStrategy.NONE);
 
             Glide.with(ImageViewPagerActivity.this)
                     .using(new CustomImageModelLoader(imageView.getContext()))
                     .load(model)
+//                    .load(model.getBaseUrl())
 //                .centerCrop()
-                    .crossFade()
                     .listener(new RequestListener<CustomImageSizeModel, GlideDrawable>() {
                         @Override
                         public boolean onException(Exception e, CustomImageSizeModel model, Target<GlideDrawable> target, boolean isFirstResource) {
