@@ -30,6 +30,8 @@
         </activity>
         <activity android:name=".ui.GirdViewActivity">
         </activity>
+        <activity android:name=".ui.SimpleActivity">
+        </activity>
     </application>
 
 </manifest>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="example.com.glidesample.ui.SimpleActivity">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/ivShow"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/placeholder"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scrollbarStyle="insideInset"/>
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnLoad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="加载"/>
+
+        <Button
+            android:id="@+id/btnProcessBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="进度条监听"/>
+
+        <Button
+            android:id="@+id/btnResize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设置大小"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnFade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="由浅到深"/>
+
+        <Button
+            android:id="@+id/btnLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="左滑"/>
+
+        <Button
+            android:id="@+id/btnScale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="缩放"/>
+
+        <Button
+            android:id="@+id/btnAllAnimate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已缓存图片动画"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnPriority"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="定义优先级"/>
+
+        <Button
+            android:id="@+id/btnDownLoad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="下载图片"/>
+
+        <Button
+            android:id="@+id/btnBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="加载背景图片"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnLoad"
+        android:text="清空"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivTonLeft"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+
+        <ImageView
+            android:id="@+id/ivTonyRight"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+    </LinearLayout>
+
+</LinearLayout>

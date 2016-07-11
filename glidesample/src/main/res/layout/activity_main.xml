@@ -1,49 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
-
-    <ImageView
-        android:id="@+id/ivShow"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:scaleType="fitCenter"/>
-
-    <ProgressBar
-        android:id="@+id/progressBar"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:scrollbarStyle="insideInset"
-        android:visibility="invisible"/>
-
-    <Button
-        android:id="@+id/btLoading"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/ivShow"
-        android:text="加载"/>
-
-    <Button
-        android:id="@+id/btnClear"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btLoading"
-        android:text="清空"/>
 
     <Button
         android:id="@+id/btnImagePager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btnClear"
         android:text="微信图片九宫格"/>
 
     <Button
         android:id="@+id/btnCommonPager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btnImagePager"
         android:text="不压缩图片九宫格"/>
-</RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btnUseGlide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="普通用法"/>
+    </LinearLayout>
+</LinearLayout>
